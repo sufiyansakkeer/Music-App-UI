@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:music_app/view/home_screen.dart';
 
 void main() {
   runApp(const MainApp());
@@ -9,12 +10,17 @@ class MainApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
-      home: Scaffold(
-        body: Center(
-          child: Text('Hello World!'),
+    return MaterialApp(
+      theme: ThemeData(
+        textTheme: const TextTheme(
+          bodyLarge: TextStyle(color: Colors.white),
+          bodyMedium: TextStyle(
+            color: Colors.white,
+          ),
         ),
       ),
+      debugShowCheckedModeBanner: false,
+      home: const HomeScreen(),
     );
   }
 }
